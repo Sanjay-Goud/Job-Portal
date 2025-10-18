@@ -53,7 +53,7 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
                         // Public endpoints
-                        .requestMatchers("/", "/index.html", "/*.html", "/*.css", "/*.js").permitAll()
+                        .requestMatchers("/", "/index.html", "/*.html", "/*.css", "/*.js", "/favicon.ico").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/jobs/search/**", "/api/jobs/{id}").permitAll()
                         // Protected endpoints
